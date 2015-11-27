@@ -1,0 +1,72 @@
+/*
+ * Copyright 2014,2015 Open Networking Laboratory
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ ONOS GUI -- Navigation -- CSS file
+
+ @author Simon Hunt
+ @author Bri Prebilic Cole
+ */
+
+#nav {
+    position: absolute;
+    top: 50px;
+    left: 8px;
+    width: 160px;
+    height: 100px;
+    padding: 4px;
+    z-index: 3000;
+    visibility: hidden;
+}
+
+.light #nav {
+    background-color: #ccf;
+    box-shadow: 0 2px 8px #777;
+}
+.dark #nav {
+    background-color: #444;
+    box-shadow: 0 2px 8px #777;
+}
+
+#nav ul li {
+    font-size: 10pt;
+}
+
+
+#nav h2 {
+    font-size: 12pt;
+    margin: 0;
+}
+#nav h3 {
+    font-size: 8pt;
+    font-style: italic;
+    margin: 0;
+}
+
+.light #nav h2,
+.light #nav h3 {
+    color: black;
+}
+
+.dark #nav h2,
+.dark #nav h3 {
+    color: #ddd;
+}
+
+.dark #nav a {
+    color: #ddd;
+}
+

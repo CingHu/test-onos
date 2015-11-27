@@ -1,0 +1,17 @@
+IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}')
+
+
+
+#1 开启mininet
+mn --topo tree,depth=2,fanout=3 --mac --controller=remote,ip=$IP,port=6633 --switch ovsk,protocols=OpenFlow13
+
+#2 
+cd onos-byon && ./startmn.sh
+
+#3
+mn --topo tree,depth=3,fanout=3  --mac  --controller=remote,ip=192.168.5.125,port=6633 --switch ovsk,protocols=OpenFlow13
+
+#4
+mn --topo tree,2,2 --mac --controller=remote,ip=$IP,port=6633 --switch ovsk,protocols=OpenFlow13
+
+
